@@ -98,7 +98,7 @@ module Fluent
     end
 
     def assign(record, key, value)
-      record[key] = process(value) || value
+      record[key] = process(value) || "undefined"
     end
 
     def return(record, key, value_nouse) 
